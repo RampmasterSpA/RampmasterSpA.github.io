@@ -12,11 +12,12 @@ const { title } = Astro.props;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title} | Rampmaster SpA</title>
+    <link rel="manifest" href="/manifest.json">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <style is:global>
-        body { font-family: 'Open Sans', sans-serif; }
+        body { font-family: 'Open Sans', sans-serif; font-size: 14.67px; }
         h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Lato', sans-serif; }
 
         /* Logo Toggle Logic */
@@ -39,14 +40,17 @@ const { title } = Astro.props;
 
     <!-- Navbar -->
     <div class="navbar bg-base-100/95 backdrop-blur-sm fixed top-0 z-50 border-b border-base-200 transition-colors duration-300">
-        <div class="container mx-auto">
-            <div class="flex-1">
-                <a href="/" class="btn btn-ghost text-xl font-heading font-bold gap-3 hover:bg-transparent">
-                    <div class="w-10 h-10 relative">
+        <div class="container mx-auto px-4">
+            <div class="flex-1 flex flex-col items-start">
+                <a href="/" class="flex items-center gap-4 hover:opacity-80 transition-opacity py-2">
+                    <div class="w-12 h-12 relative">
                         <img src="/logo_black.png" alt="Logo Rampmaster" class="logo-light w-full h-full object-contain" />
                         <img src="/logo_white.png" alt="Logo Rampmaster" class="logo-dark w-full h-full object-contain" />
                     </div>
-                    Rampmaster SpA
+                    <div class="flex flex-col">
+                        <span class="font-heading font-black text-xl leading-none">Rampmaster SpA</span>
+                        <span class="text-[10px] font-heading font-bold uppercase tracking-tighter opacity-60 hidden sm:block">Tu plataforma para llegar al próximo nivel</span>
+                    </div>
                 </a>
             </div>
             <div class="flex-none hidden md:flex items-center gap-4">

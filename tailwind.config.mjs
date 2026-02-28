@@ -6,16 +6,16 @@ export default {
       colors: {
         'rm-black': '#0D0D0D',
         'rm-yellow': '#FFC000',
-        'rm-turquoise': '#2791A6',
+        'rm-teal': '#2791A6',
         'rm-green': '#78A300',
+      },
+      fontSize: {
+        'base': ['14.67px', '1.6'], // 11pt aprox
       },
       fontFamily: {
         sans: ['"Open Sans"', 'sans-serif'],
         heading: ['"Lato"', 'sans-serif'],
       },
-      fontSize: {
-        base: ['0.9rem', '1.5'], // Ajuste a ~14.4px según guía
-      }
     },
   },
   plugins: [require("daisyui")],
@@ -23,29 +23,29 @@ export default {
     themes: [
       {
         rampmaster: {
-          "primary": "#FFC000", // Amarillo
-          "primary-content": "#0D0D0D", // Texto NEGRO sobre amarillo (Accesibilidad AAA)
-          "secondary": "#2791A6", // Turquesa
-          "secondary-content": "#ffffff", // Texto blanco sobre turquesa (Mejor contraste posible, aunque revisar tamaño)
-          "accent": "#78A300", // Verde
-          "accent-content": "#0D0D0D", // Texto negro sobre verde
-          "neutral": "#0D0D0D", // Negro corporativo
+          "primary": "#2791A6", // Turquesa como primario para CTAs (Accesibilidad)
+          "primary-content": "#ffffff",
+          "secondary": "#FFC000", // Amarillo decorativo
+          "secondary-content": "#0D0D0D",
+          "accent": "#78A300",
+          "accent-content": "#0D0D0D",
+          "neutral": "#0D0D0D",
           "neutral-content": "#ffffff",
           "base-100": "#ffffff",
           "base-200": "#f3f4f6",
           "base-300": "#d1d5db",
-          "base-content": "#0D0D0D", // Texto base negro
+          "base-content": "#0D0D0D",
         },
         "rampmaster-dark": {
-          "primary": "#FFC000",
-          "primary-content": "#0D0D0D", // Texto NEGRO sobre amarillo
-          "secondary": "#2791A6",
-          "secondary-content": "#ffffff",
+          "primary": "#2791A6",
+          "primary-content": "#ffffff",
+          "secondary": "#FFC000",
+          "secondary-content": "#0D0D0D",
           "accent": "#78A300",
           "accent-content": "#0D0D0D",
           "neutral": "#ffffff",
           "neutral-content": "#0D0D0D",
-          "base-100": "#0D0D0D", // Fondo Negro Corporativo
+          "base-100": "#0D0D0D",
           "base-200": "#1a1a1a",
           "base-300": "#262626",
           "base-content": "#ffffff",
