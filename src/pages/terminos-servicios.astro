@@ -1,0 +1,125 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Términos de Servicios">
+    <section class="py-32 px-4 bg-base-100 print:py-0 print:px-0">
+        <div class="container mx-auto max-w-4xl">
+            
+            <!-- Print Header -->
+            <div class="hidden print:flex flex-col items-center mb-8 border-b border-gray-300 pb-4">
+                <img src="/logo_black.png" alt="Rampmaster SpA" class="w-16 h-16 object-contain mb-2" />
+                <h2 class="text-xl font-bold text-black">Rampmaster SpA</h2>
+                <p class="text-sm text-gray-600">Contrato de Servicios de Suscripción</p>
+            </div>
+
+            <div class="text-center mb-16 print:mb-8">
+                <h1 class="text-4xl md:text-5xl font-heading font-black mb-4 text-rm-black print:text-3xl">Términos de Contratación</h1>
+                <p class="text-xl text-gray-500 font-light print:text-lg">Servicios de Suscripción (Productized Services)</p>
+                <div class="w-24 h-1.5 bg-rm-teal mx-auto rounded-full mt-6 print:hidden"></div>
+            </div>
+
+            <div class="prose prose-lg max-w-none text-rm-black print:text-sm print:leading-normal">
+                <p class="mb-8 leading-relaxed text-justify">
+                    Los presentes términos regulan la contratación de los planes de suscripción mensual de <strong>Rampmaster SpA</strong>. Al contratar cualquiera de nuestros planes, el Cliente acepta las siguientes condiciones operativas y comerciales.
+                </p>
+                
+                <div class="mb-10 print:mb-6 print:break-inside-avoid">
+                    <h3 class="text-2xl font-heading font-bold mb-4 flex items-center gap-3 print:text-lg print:mb-2">
+                        <span class="text-rm-teal text-3xl print:text-black print:text-xl">1.</span> Definición del Servicio
+                    </h3>
+                    <p class="leading-relaxed text-justify">
+                        Rampmaster SpA provee un servicio de acompañamiento técnico y consultoría operativa empaquetado en una bolsa de horas fija mensual. El objetivo primordial es asegurar la continuidad y el escalamiento del negocio del Cliente hacia el próximo nivel.
+                    </p>
+                </div>
+
+                <div class="mb-10 print:mb-6 print:break-inside-avoid">
+                    <h3 class="text-2xl font-heading font-bold mb-4 flex items-center gap-3 print:text-lg print:mb-2">
+                        <span class="text-rm-teal text-3xl print:text-black print:text-xl">2.</span> Estructura de Planes y Pagos
+                    </h3>
+                    <ul class="list-none space-y-3 pl-4 border-l-4 border-rm-teal/20 print:border-l-2 print:border-gray-300 print:space-y-1">
+                        <li><strong>Valores Netos:</strong> Todos los precios publicados son valores netos y están sujetos al Impuesto al Valor Agregado (IVA) del 19%.</li>
+                        <li><strong>Facturación:</strong> El cobro se realiza de manera anticipada durante los primeros 5 días de cada mes calendario.</li>
+                        <li><strong>Bolsa de Horas:</strong> Las horas incluidas en cada plan (5, 12 o 25 horas según contrato) no son acumulables para periodos posteriores.</li>
+                    </ul>
+                </div>
+
+                <div class="mb-10 bg-base-200 p-8 rounded-2xl border border-base-300 print:bg-white print:border print:border-gray-300 print:p-4 print:mb-6 print:break-inside-avoid">
+                    <h3 class="text-2xl font-heading font-bold mb-4 flex items-center gap-3 print:text-lg print:mb-2">
+                        <span class="text-rm-teal text-3xl print:text-black print:text-xl">3.</span> Cláusula de Escalabilidad Flexible y Penalización
+                    </h3>
+                    <p class="mb-4 print:mb-2">Para garantizar la sostenibilidad del modelo y el ahorro del Cliente, se aplica la siguiente política de exceso de consumo:</p>
+                    <ul class="list-disc pl-6 space-y-2 print:space-y-1">
+                        <li><strong>Horas Extra Estándar:</strong> Las horas que excedan el plan base pero no alcancen el umbral del plan superior se facturarán a la tarifa estándar de hora extra definida en el contrato.</li>
+                        <li><strong>Umbral de Penalización:</strong> Se entiende por umbral el momento en que el consumo total mensual iguala la cantidad de horas del plan inmediatamente superior (Ej: 12 horas para el Plan Continuidad).</li>
+                        <li><strong>Aplicación de Penalización:</strong> Al alcanzar o superar dicho umbral sin haber solicitado un upgrade de plan, las horas excedentes se facturarán con un recargo por penalización del <strong>45% al 47% sobre el valor base</strong>.</li>
+                        <li><strong>Propósito:</strong> Esta medida busca incentivar la migración estratégica a planes de mayor volumen, los cuales ofrecen un costo por hora significativamente menor y mayor rentabilidad para el Cliente.</li>
+                    </ul>
+                </div>
+
+                <div class="mb-10 print:mb-6 print:break-inside-avoid">
+                    <h3 class="text-2xl font-heading font-bold mb-4 flex items-center gap-3 print:text-lg print:mb-2">
+                        <span class="text-rm-teal text-3xl print:text-black print:text-xl">4.</span> Niveles de Servicio (SLA)
+                    </h3>
+                    <p class="mb-4 print:mb-2">Rampmaster SpA se compromete a tiempos de respuesta diferenciados según el plan contratado:</p>
+                    <ul class="space-y-3 print:space-y-1">
+                        <li class="flex items-start gap-3">
+                            <span class="text-rm-teal text-xl mt-1 print:text-black">☑</span>
+                            <div><strong>Plan Continuidad:</strong> Respuesta a incidencias críticas en un plazo máximo de 24 horas hábiles.</div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-rm-teal text-xl mt-1 print:text-black">☑</span>
+                            <div><strong>Plan Optimización:</strong> Soporte prioritario con línea directa de gestión y respuesta acelerada.</div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-rm-teal text-xl mt-1 print:text-black">☑</span>
+                            <div><strong>Plan Innovación:</strong> Atención inmediata y consultoría de nivel directivo (CTO Partner).</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mb-10 print:mb-6 print:break-inside-avoid">
+                    <h3 class="text-2xl font-heading font-bold mb-4 flex items-center gap-3 print:text-lg print:mb-2">
+                        <span class="text-rm-teal text-3xl print:text-black print:text-xl">5.</span> Propiedad Intelectual y Confidencialidad
+                    </h3>
+                    <p class="leading-relaxed text-justify">
+                        Todas las optimizaciones, desarrollos y flujos de gestión creados durante la prestación del servicio son propiedad de Rampmaster SpA hasta el pago total de la suscripción mensual, tras lo cual se otorga una licencia de uso perpetua al Cliente para su operación interna.
+                    </p>
+                </div>
+
+                <div class="mb-12 print:mb-6 print:break-inside-avoid">
+                    <h3 class="text-2xl font-heading font-bold mb-4 flex items-center gap-3 print:text-lg print:mb-2">
+                        <span class="text-rm-teal text-3xl print:text-black print:text-xl">6.</span> Terminación del Servicio
+                    </h3>
+                    <p class="leading-relaxed text-justify">
+                        El Cliente podrá solicitar la cancelación de su suscripción con un aviso previo de <strong>30 días corridos</strong>. Las horas no utilizadas al momento del término no serán reembolsables.
+                    </p>
+                </div>
+
+                <div class="flex justify-center mt-16 print:hidden">
+                    <button id="print-btn" class="btn btn-outline gap-2 hover:bg-rm-teal hover:text-white hover:border-rm-teal transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+                        </svg>
+                        Imprimir Contrato (PDF)
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style is:global>
+        @media print {
+            .navbar, footer, #theme-toggle, .btn { display: none !important; }
+            body, section, .bg-base-100, .bg-base-200 { background-color: white !important; color: black !important; padding: 0 !important; margin: 0 !important; }
+            .prose { max-width: 100% !important; font-size: 12pt !important; }
+            a { text-decoration: none !important; color: black !important; }
+        }
+    </style>
+
+    <script>
+        document.getElementById('print-btn')?.addEventListener('click', () => {
+            window.print();
+        });
+    </script>
+</MainLayout>

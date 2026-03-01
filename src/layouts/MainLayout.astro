@@ -2,9 +2,13 @@
 // src/layouts/MainLayout.astro
 interface Props {
 	title: string;
+    description?: string;
 }
 
-const { title } = Astro.props;
+const { 
+    title, 
+    description = "Rampmaster SpA: Tu plataforma de ingeniería de software por suscripción. Soluciones móviles, web y cloud escalables para llevar tu negocio al próximo nivel." 
+} = Astro.props;
 ---
 
 <html lang="es" data-theme="rampmaster">
@@ -12,11 +16,34 @@ const { title } = Astro.props;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title} | Rampmaster SpA</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="Software Factory, Ingeniería por Suscripción, Desarrollo Web, Desarrollo Móvil, Cloud Computing, DevOps, Chile, Rampmaster">
+    <meta name="author" content="Rampmaster SpA">
+    <meta name="theme-color" content="#0D0D0D">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rampmaster.org/">
+    <meta property="og:title" content={`${title} | Rampmaster SpA`}>
+    <meta property="og:description" content={description}>
+    <meta property="og:image" content="https://rampmaster.org/logo_black.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://rampmaster.org/">
+    <meta property="twitter:title" content={`${title} | Rampmaster SpA`}>
+    <meta property="twitter:description" content={description}>
+    <meta property="twitter:image" content="https://rampmaster.org/logo_black.png">
+
+    <!-- Icons & Manifest -->
     <link rel="icon" type="image/png" href="/logo_black.png" />
     <link rel="manifest" href="/manifest.json">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
     <style is:global>
         body { font-family: 'Open Sans', sans-serif; font-size: 14.67px; }
         h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Lato', sans-serif; }
@@ -34,6 +61,13 @@ const { title } = Astro.props;
             document.documentElement.setAttribute("data-theme", "rampmaster");
         } else {
             document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"));
+        }
+
+        // Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
         }
     </script>
 </head>
@@ -60,8 +94,8 @@ const { title } = Astro.props;
             <div class="flex-none gap-2">
                 <!-- Desktop Links -->
                 <ul class="menu menu-horizontal px-1 font-semibold opacity-80 hidden md:flex">
-                    <li><a href="/#servicios" class="hover:bg-base-200 rounded-md">Servicios</a></li>
-                    <li><a href="/#nosotros" class="hover:bg-base-200 rounded-md">Nosotros</a></li>
+                    <li><a href="/#planes" class="hover:bg-base-200 rounded-md">Planes</a></li>
+                    <li><a href="/#escalabilidad" class="hover:bg-base-200 rounded-md">Escalabilidad</a></li>
                 </ul>
 
                 <!-- Theme Toggle -->
@@ -80,8 +114,8 @@ const { title } = Astro.props;
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
                     </label>
                     <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 border border-base-200">
-                        <li><a href="/#servicios">Servicios</a></li>
-                        <li><a href="/#nosotros">Nosotros</a></li>
+                        <li><a href="/#planes">Planes</a></li>
+                        <li><a href="/#escalabilidad">Escalabilidad</a></li>
                         <li><a href="/#contacto" class="text-primary font-bold">Contáctanos</a></li>
                     </ul>
                 </div>

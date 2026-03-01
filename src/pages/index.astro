@@ -2,13 +2,13 @@
 import MainLayout from '../layouts/MainLayout.astro';
 ---
 
-<MainLayout title="Solucionando tu vida a través de la tecnología">
+<MainLayout title="Suscripciones de Ingeniería de Software">
     <!-- Hero Section -->
-    <div class="hero min-h-screen bg-rm-black text-white relative overflow-hidden pt-20">
+    <div class="hero min-h-screen bg-rm-black text-white relative overflow-hidden">
         <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-rm-teal/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 animate-pulse"></div>
         <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-rm-yellow/10 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4 animate-pulse" style="animation-delay: 2s;"></div>
 
-        <div class="hero-content text-center relative z-10 px-4">
+        <div class="hero-content text-center relative z-10 px-4 pt-10 pb-20">
             <div class="max-w-4xl">
                 <div class="inline-block mb-6 px-4 py-1.5 border border-primary/50 rounded-full text-primary text-sm font-bold tracking-wider uppercase bg-primary/10 backdrop-blur-sm">
                     Tecnología con Sentido Humano
@@ -31,63 +31,130 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
     </div>
 
-    <!-- Services Section -->
-    <section id="servicios" class="py-24 bg-base-200 transition-colors duration-300">
+    <!-- Pricing Section -->
+    <section id="planes" class="py-24 bg-base-200 transition-colors duration-300">
         <div class="container mx-auto px-4">
             <div class="text-center mb-20">
-                <h2 class="text-4xl md:text-5xl font-heading font-bold mb-4">Ingeniería con Propósito</h2>
-                <div class="w-24 h-1.5 bg-rm-teal mx-auto rounded-full"></div>
+                <h2 class="text-4xl md:text-5xl font-heading font-bold mb-4">Planes de Suscripción</h2>
+                <p class="text-lg opacity-70 max-w-2xl mx-auto">Elige el nivel de soporte y desarrollo que tu negocio necesita hoy. Escala mañana.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 border-t-4 border-rm-teal group hover:-translate-y-2">
-                    <div class="card-body items-center text-center p-8">
-                        <div class="w-20 h-20 rounded-full bg-rm-teal/10 flex items-center justify-center mb-6 group-hover:bg-rm-teal group-hover:text-white transition-colors duration-300 text-rm-teal">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
-                        </div>
-                        <h3 class="card-title text-2xl font-heading font-bold mb-3">Soluciones Móviles</h3>
-                        <p class="opacity-70 leading-relaxed">Apps que resuelven necesidades reales en la palma de tu mano, optimizadas para la vida moderna.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Plan Continuidad -->
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 border border-base-300 hover:-translate-y-2">
+                    <div class="card-body p-8">
+                        <h3 class="text-2xl font-heading font-bold mb-2">Continuidad</h3>
+                        <div class="text-4xl font-black mb-6">$175.000 <span class="text-sm font-normal opacity-60">+ IVA /mes</span></div>
+                        <p class="opacity-70 mb-6 text-sm">Ideal para mantenimiento y pequeñas mejoras continuas.</p>
+                        <ul class="space-y-3 mb-8 text-sm">
+                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-rm-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 5 Horas de desarrollo</li>
+                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-rm-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Soporte Base</li>
+                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-rm-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Reportes Mensuales</li>
+                        </ul>
+                        <a href="mailto:rmorenp@rampmaster.org?subject=Plan Continuidad" class="btn btn-outline btn-block">Seleccionar</a>
                     </div>
                 </div>
 
-                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 border-t-4 border-rm-yellow group hover:-translate-y-2">
-                    <div class="card-body items-center text-center p-8">
-                        <div class="w-20 h-20 rounded-full bg-rm-yellow/10 flex items-center justify-center mb-6 group-hover:bg-rm-yellow group-hover:text-rm-black transition-colors duration-300 text-rm-yellow">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                        </div>
-                        <h3 class="card-title text-2xl font-heading font-bold mb-3">Ecosistemas Web</h3>
-                        <p class="opacity-70 leading-relaxed">Plataformas intuitivas diseñadas para simplificar procesos complejos y ahorrarte tiempo.</p>
+                <!-- Plan Optimización (Destacado) -->
+                <div class="card bg-base-100 shadow-2xl hover:shadow-3xl transition-all duration-300 border-t-4 border-rm-teal relative transform md:-translate-y-4 z-10">
+                    <div class="absolute top-0 right-0 bg-rm-teal text-white text-xs font-bold px-3 py-1 rounded-bl-lg uppercase">Recomendado</div>
+                    <div class="card-body p-8">
+                        <h3 class="text-2xl font-heading font-bold mb-2 text-rm-teal">Optimización</h3>
+                        <div class="text-4xl font-black mb-6">$384.000 <span class="text-sm font-normal opacity-60">+ IVA /mes</span></div>
+                        <p class="opacity-70 mb-6 text-sm">Para negocios en crecimiento que requieren agilidad.</p>
+                        <ul class="space-y-3 mb-8 text-sm">
+                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-rm-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <strong>12 Horas</strong> de desarrollo</li>
+                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-rm-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Soporte Prioritario</li>
+                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-rm-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Asesoría Técnica</li>
+                        </ul>
+                        <a href="mailto:rmorenp@rampmaster.org?subject=Plan Optimización" class="btn btn-primary btn-block text-white shadow-lg shadow-rm-teal/20">Empezar Ahora</a>
                     </div>
                 </div>
 
-                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 border-t-4 border-rm-green group hover:-translate-y-2">
-                    <div class="card-body items-center text-center p-8">
-                        <div class="w-20 h-20 rounded-full bg-rm-green/10 flex items-center justify-center mb-6 group-hover:bg-rm-green group-hover:text-white transition-colors duration-300 text-rm-green">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>
-                        </div>
-                        <h3 class="card-title text-2xl font-heading font-bold mb-3">Infraestructura Invisible</h3>
-                        <p class="opacity-70 leading-relaxed">Tecnología robusta que funciona en segundo plano para que tú puedas enfocarte en lo que importa.</p>
+                <!-- Plan Innovación -->
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 border border-base-300 hover:-translate-y-2">
+                    <div class="card-body p-8">
+                        <h3 class="text-2xl font-heading font-bold mb-2">Innovación</h3>
+                        <div class="text-4xl font-black mb-6">$700.000 <span class="text-sm font-normal opacity-60">+ IVA /mes</span></div>
+                        <p class="opacity-70 mb-6 text-sm">Desarrollo intensivo y transformación digital completa.</p>
+                        <ul class="space-y-3 mb-8 text-sm">
+                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-rm-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <strong>25 Horas</strong> de desarrollo</li>
+                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-rm-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Consultoría Estratégica</li>
+                            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-rm-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Arquitectura Cloud</li>
+                        </ul>
+                        <a href="mailto:rmorenp@rampmaster.org?subject=Plan Innovación" class="btn btn-outline btn-block">Seleccionar</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contacto" class="py-24 bg-base-100 relative overflow-hidden transition-colors duration-300">
-        <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(currentColor 1px, transparent 1px); background-size: 30px 30px;"></div>
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="max-w-4xl mx-auto bg-base-200/50 backdrop-blur-lg rounded-3xl p-8 md:p-16 border border-base-300 text-center shadow-2xl">
-                <h2 class="text-4xl md:text-5xl font-heading font-bold mb-6">¿Hablamos de soluciones?</h2>
-                <p class="text-xl opacity-80 mb-10">No nos cuentes tus requerimientos técnicos, cuéntanos tus problemas cotidianos.</p>
-                
-                <a href="mailto:rmorenp@rampmaster.org" class="inline-flex items-center gap-3 bg-rm-teal text-white font-bold text-lg px-8 py-4 rounded-full hover:brightness-110 transition-transform hover:scale-105 shadow-lg shadow-rm-teal/20">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    rmorenp@rampmaster.org
-                </a>
+    <!-- Scalability Section -->
+    <section id="escalabilidad" class="py-24 bg-base-100 relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="flex-1">
+                    <div class="inline-block mb-4 px-3 py-1 bg-rm-yellow/10 text-rm-yellow rounded-full text-xs font-bold uppercase tracking-wide">Flexibilidad Total</div>
+                    <h2 class="text-4xl font-heading font-bold mb-6">Escalabilidad Flexible</h2>
+                    <p class="text-lg opacity-80 mb-6 leading-relaxed">
+                        Entendemos que las necesidades de tu negocio fluctúan. Nuestro modelo se adapta a ti mes a mes.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-base-200 flex items-center justify-center flex-shrink-0 font-bold text-xl">1</div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Horas Extra Estándar</h4>
+                                <p class="opacity-70 text-sm">Si necesitas más horas, pagas la tarifa estándar hasta alcanzar el umbral del siguiente plan.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-base-200 flex items-center justify-center flex-shrink-0 font-bold text-xl">2</div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Incentivo al Upgrade</h4>
+                                <p class="opacity-70 text-sm">Al superar el límite, aplicamos una tarifa ajustada para invitarte a mejorar tu plan y obtener más beneficios por menos costo unitario.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 bg-base-200 rounded-3xl p-8 md:p-12 relative">
+                    <!-- Abstract visual representation of scaling -->
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-rm-teal/10 rounded-full blur-3xl"></div>
+                    <div class="absolute bottom-0 left-0 w-32 h-32 bg-rm-yellow/10 rounded-full blur-3xl"></div>
+                    
+                    <div class="relative z-10 space-y-4">
+                        <div class="bg-base-100 p-4 rounded-xl shadow-sm flex justify-between items-center">
+                            <span class="font-bold">Plan Actual</span>
+                            <span class="badge badge-ghost">Continuidad</span>
+                        </div>
+                        <div class="flex justify-center py-2">
+                            <svg class="w-6 h-6 opacity-30 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                        </div>
+                        <div class="bg-base-100 p-4 rounded-xl shadow-md border-l-4 border-rm-teal flex justify-between items-center transform scale-105">
+                            <div>
+                                <span class="font-bold block">Upgrade Automático</span>
+                                <span class="text-xs opacity-60">Mejor costo/hora</span>
+                            </div>
+                            <span class="badge badge-primary text-white">Optimización</span>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (CTA) -->
+    <section id="contacto" class="py-24 bg-rm-black text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#333 1px, transparent 1px); background-size: 30px 30px;"></div>
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <h2 class="text-4xl md:text-5xl font-heading font-bold mb-8">¿Listo para solucionar problemas?</h2>
+            <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">Hablemos hoy y define el plan que mejor se adapta a tu etapa actual.</p>
+            
+            <a href="mailto:rmorenp@rampmaster.org" class="inline-flex items-center gap-3 bg-rm-teal text-white font-bold text-xl px-10 py-5 rounded-full hover:bg-white hover:text-rm-teal transition-all hover:scale-105 shadow-2xl shadow-rm-teal/30">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                rmorenp@rampmaster.org
+            </a>
         </div>
     </section>
 </MainLayout>
