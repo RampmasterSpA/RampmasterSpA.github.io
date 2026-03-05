@@ -63,10 +63,34 @@ const {
             document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"));
         }
 
-        // Service Worker Registration
+        // Service Worker Registration & Update Logic
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js');
+                navigator.serviceWorker.register('/sw.js').then(registration => {
+                    // Detectar si hay una actualización esperando
+                    if (registration.waiting) {
+                        registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+                    }
+
+                    registration.addEventListener('updatefound', () => {
+                        const newWorker = registration.installing;
+                        newWorker.addEventListener('statechange', () => {
+                            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                // Nueva versión disponible, recargar para aplicar cambios críticos
+                                console.log('[App] Nueva versión disponible. Recargando...');
+                                window.location.reload();
+                            }
+                        });
+                    });
+                });
+
+                // Recargar si el SW toma el control (primera carga o actualización forzada)
+                let refreshing;
+                navigator.serviceWorker.addEventListener('controllerchange', () => {
+                    if (refreshing) return;
+                    window.location.reload();
+                    refreshing = true;
+                });
             });
         }
     </script>
@@ -143,7 +167,8 @@ const {
                 </div>
                 <div class="flex gap-6 opacity-70">
                     <a href="/privacidad" class="hover:bg-white/10 rounded-md px-3 py-1 transition-colors">Privacidad</a>
-                    <a href="/terminos" class="hover:bg-white/10 rounded-md px-3 py-1 transition-colors">Términos</a>
+                    <a href="/terminos" class="hover:bg-white/10 rounded-md px-3 py-1 transition-colors">Términos de Uso</a>
+                    <a href="/terminos-servicios" class="hover:bg-white/10 rounded-md px-3 py-1 transition-colors font-bold text-rm-yellow">Contrato de Servicios</a>
                 </div>
             </div>
         </div>
